@@ -38,4 +38,38 @@ Frontend (React)
 	•	Time
 	•	Number of guests
 
-Key File: ReservationForm.js
+Steps to Run the Project:
+-------------------------
+
+1. Clone the Repository:
+   git clone https://github.com/yourusername/restaurant-reservation-system.git
+   cd restaurant-reservation-system
+
+2. Setup MySQL:
+   - Open MySQL and run:
+     CREATE DATABASE restaurantdb;
+
+3. Backend Setup:
+   - Open the `backend` folder in your IDE.
+   - Update the file `src/main/resources/application.properties`:
+
+     spring.datasource.url=jdbc:mysql://localhost:3306/restaurantdb
+     spring.datasource.username=root
+     spring.datasource.password=yourpassword
+     spring.jpa.hibernate.ddl-auto=update
+
+   - Run the application:
+     cd backend
+     mvn clean install
+     mvn spring-boot:run
+
+   - Backend will run at: http://localhost:8080
+
+4. Frontend Setup:
+   - Open the `frontend` folder in your terminal.
+   - Run the following:
+     cd frontend
+     npm install
+     npm start
+
+   - Frontend will run at: http://localhost:3000
